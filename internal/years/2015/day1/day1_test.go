@@ -1,4 +1,4 @@
-package day1
+package main
 
 import "testing"
 
@@ -13,10 +13,10 @@ func TestPartOne(t *testing.T) {
 		{"./input/test/partOne/caseFour.txt", -1},
 		{"./input/test/partOne/caseFive.txt", -3},
 	}
-	for _, tc := range testcases {
+	for i, tc := range testcases {
 		result := partOne(tc.in)
 		if result != tc.want {
-			t.Errorf("PartOne produced: %d, want %d", result, tc.want)
+			t.Errorf("PartOne, case %d produced: %d, want %d", i+1, result, tc.want)
 		}
 	}
 }
